@@ -1,0 +1,109 @@
+/* Contenedor general de la sección */
+.features-skillnet {
+    display: flex;
+    align-items: center; /* Centra verticalmente ambas columnas */
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 100%;
+    height: 110vh;
+  }
+  
+  /* Columna izquierda: título */
+  .features-left {
+    flex: 0 0 20%;
+    margin-left: 70px;
+  }
+  
+  .features-left h2 {
+    font-size: 40px;
+    text-align: left;
+    color: #985610; /* Color del título */
+    margin: 0;
+  }
+  
+  /* Columna derecha: tarjetas */
+  .features-right {
+    flex: 0 0 60%;
+    min-height: 200px; /* Altura mínima para forzar el estiramiento vertical */
+    display: flex;
+    align-items: stretch;  /* Hace que los hijos se estiren verticalmente */
+  }
+  
+  /* Contenedor de las tarjetas: se disponen en una sola fila */
+  .features-cards {
+  
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; /* Se ubican lado a lado */
+    flex-wrap: nowrap; /* Forzamos que no se apilen, aunque en pantallas muy pequeñas puedes necesitar wrap */
+    justify-content: space-around; /* Centra verticalmente el contenido */
+    text-align: center;      /* Centra horizontalmente el texto */
+  }
+
+  /* Cada tarjeta individual */
+  .feature-card {
+    margin: 0 10px;
+    background-color: #985610;
+    color: #FFFFFF;
+    border-radius: 15px;
+    padding: 20px;
+    flex: 0 0 300px; /* Ancho fijo para garantizar que se muestren en fila */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-card h3 {
+    font-size: 30px;
+    margin-bottom: 16px;
+  }
+  
+  .feature-card p {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  @media screen and (max-width: 768px) {
+
+    /* Ajustes para FeaturesSkillNet */
+    .features-skillnet {
+      flex-direction: column !important;   /* columnas apiladas */
+      height: auto !important;              /* altura automática */
+      padding: 20px 10px !important;
+    }
+  
+    .features-left, .features-right {
+      flex: 1 1 auto !important;
+      width: 100% !important;
+    }
+  
+    .features-left h2 {
+      text-align: center !important;        /* centramos el título */
+      font-size: 1.8rem !important;
+    }
+  
+    .features-cards {
+      flex-wrap: wrap !important;           /* permitir que bajen las tarjetas */
+      justify-content: center !important;
+      gap: 1rem !important;
+    }
+  
+    .feature-card {
+      flex: 1 1 80% !important;              /* tarjetas ocupan casi todo el ancho */
+      max-width: 300px !important;
+      margin: 0 auto;                        /* centrado */
+    }
+  
+    .feature-card h3 {
+      font-size: 1.5rem !important;
+    }
+  
+    .feature-card p {
+      font-size: 1rem !important;
+    }
+  }
+  /* src/components/molecules/FeaturesSkillNet.css */
+.feature-icon {
+  width: 100%;
+  height: 250px;       /* Ajusta según lo que quieras */
+  object-fit: cover;   /* Recorta sin deformar */
+  border-radius: 10px;
+}
